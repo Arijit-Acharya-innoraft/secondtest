@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Login Redirect module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_form_alter().
+ */
+function login_redirect_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'user_login_form') {
+    // Adding a custom submit handler.
+    $form['#submit'][] = 'login_redirect_custom_login_submit';
+  }
+}
+
+/**
+ * Setting the target url after login for different users.
+ *
+ * @param array $form
+ *   The lognin form.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form interface.
+ */
+function login_redirect_custom_login_submit(array &$form, FormStateInterface $form_state) {
+  $username = $form_state->getValue('name');
+  $user = \Drupal::entityTypeManager()->getStorage('user')->loadByProperties(['name' => $username]);
+  if (!empty($user)) {
+    $user = reset($user);
+    $user_roles = $user->getRoles();
+
+    if (in_array("reporter", $user_roles)) {
+      $targetUrl = '/reporter-s-dashboard';
+
+    }
+    if (in_array("editor", $user_roles)) {
+      $targetUrl = '/editor-dashboard';
+    }
+  }
+
+  \Drupal::currentUser()->setAccount($user);
+
+  // Redirect the user.
+  $form_state->setRedirectUrl(Url::fromUri('internal:' . $targetUrl));
+
+}

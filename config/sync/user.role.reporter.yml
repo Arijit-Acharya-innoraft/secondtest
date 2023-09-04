@@ -1,0 +1,21 @@
+uuid: 6492792f-c9a3-4ba7-a2f7-5c40f6769bba
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.news
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - node
+    - toolbar
+id: reporter
+label: Reporter
+weight: 5
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create news content'
+  - 'edit any news content'
+  - 'use editorial transition draft_to_review'

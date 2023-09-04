@@ -1,0 +1,22 @@
+uuid: b18a1bea-306c-4004-bd05-db368f41720e
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term_path_url
+label: 'Taxonomy term path-url'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/[term:name]'
+selection_criteria:
+  b2f94497-472b-4121-bf50-3528757f033b:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: b2f94497-472b-4121-bf50-3528757f033b
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      tags: tags
+selection_logic: and
+weight: -5
+relationships: {  }
