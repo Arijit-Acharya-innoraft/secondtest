@@ -1,0 +1,27 @@
+uuid: 8735bdc5-8d01-41b4-ab38-dd496923b029
+langcode: en-gb
+status: true
+dependencies: {  }
+name: node_news
+label: 'node news validation'
+entity_type: node
+bundle: news
+field_validation_rules:
+  f86178c1-5a1f-439e-a5a7-b9d27ecc1729:
+    id: length_field_validation_rule
+    title: 'Title length'
+    data:
+      min: '1'
+      max: '25'
+      strip_tags: false
+      trim: true
+    weight: 1
+    uuid: f86178c1-5a1f-439e-a5a7-b9d27ecc1729
+    field_name: title
+    column: value
+    error_message: 'Length Exceeded'
+    roles: {  }
+    condition:
+      field: ''
+      operator: ''
+      value: ''

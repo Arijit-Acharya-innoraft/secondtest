@@ -1,0 +1,33 @@
+uuid: 03eeb07b-e163-4084-8baa-d84a533418e0
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - views.view.categories
+  module:
+    - taxonomy
+    - views
+  theme:
+    - bootstrap5
+id: bootstrap5_views_block__categories_block_1
+theme: bootstrap5
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:categories-block_1'
+settings:
+  id: 'views_block:categories-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      tags: tags
