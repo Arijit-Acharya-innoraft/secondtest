@@ -1,0 +1,13 @@
+# config_name: api_response.settings
+# id: api_response.settings
+# label: 'Custom API Security Settings'
+# status: true
+# langcode: en
+# core_version_requirement: ^10
+
+# fieldset:
+#   api_secret_key:
+#     type: textfield
+#     label: 'API Secret Key'
+#     description: 'Enter the secret key to access the API.'
+#     default_value: ''

@@ -1,0 +1,5 @@
+name: Api Response
+description: 'Creation of an api response'
+type: module
+core_version_requirement: ^10
+package: custom

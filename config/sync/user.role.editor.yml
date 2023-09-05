@@ -1,0 +1,33 @@
+uuid: af75036f-4f08-4590-83ef-6fe2599eedde
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.news
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - node
+    - system
+    - toolbar
+id: editor
+label: Editor
+weight: 4
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'use editorial transition archive'
+  - 'use editorial transition archived_draft'
+  - 'use editorial transition archived_published'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition draft_to_review'
+  - 'use editorial transition publish'
+  - 'use editorial transition review_to_draft'
+  - 'use editorial transition review_to_publish'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view news revisions'
+  - 'view own unpublished content'

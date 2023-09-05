@@ -1,0 +1,30 @@
+uuid: 7e46c308-e101-461f-9d1e-f7e20005f84e
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+id: featured
+label: Featured
+bundles:
+  - news
+entity_type: node
+global: true
+flag_short: 'Breaking News'
+flag_long: ''
+flag_message: ''
+unflag_short: 'Normal News'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+weight: 0
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: owner
+linkTypeConfig: {  }
