@@ -1,0 +1,15 @@
+uuid: 46d55021-bee2-4270-b259-7c4f5bd12591
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - flag.flag.featured
+  module:
+    - flag
+id: flag_action.featured_unflag
+label: 'Normal News'
+type: node
+plugin: 'flag_action:featured_unflag'
+configuration:
+  flag_id: featured
+  flag_action: unflag

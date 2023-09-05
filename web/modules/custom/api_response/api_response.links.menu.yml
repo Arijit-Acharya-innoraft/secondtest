@@ -1,0 +1,6 @@
+api_response.menu_links:
+  title: 'Custom API Security Settings'
+  description: 'Configure the API secret key.'
+  route_name: api_response.settings_form
+  parent: system.admin_config_development
+  weight: 99

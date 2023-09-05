@@ -1,0 +1,4 @@
+services:
+  api_response.statistics_service:
+    class: 'Drupal\api_response\Services\StatisticsService'
+    arguments: ['@database']
